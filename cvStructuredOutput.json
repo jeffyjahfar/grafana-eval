@@ -1,0 +1,3389 @@
+{
+  "date": "2020-06-24T12:02:22.468793-07:00",
+  "version": {
+    "version": "v2.1.9",
+    "helmVersion": "v2.12.3",
+    "casectl": "v1.2.0",
+    "build": "59197ab"
+  },
+  "numFail": 1,
+  "products": {
+    "helm-chart/0010-infra": {
+      "pass": false,
+      "name": "0010-infra",
+      "type": "helm-chart",
+      "product": {
+        "subcharts": 2,
+        "version": "2.5.0"
+      },
+      "messages": [
+        {
+          "severity": "REVIEW",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "image \"influxdb_alpine:v2.5.0.0\" is not used",
+          "rule": "ManifestImagesAreUsed"
+        },
+        {
+          "severity": "REVIEW",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "image \"zen-metastore-db:v2.5.0.0\" is not used",
+          "rule": "ManifestImagesAreUsed"
+        },
+        {
+          "severity": "REVIEW",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "potentially secret parameter config.admin.https_certificate might not be allowed",
+          "rule": "NoSensitiveInfoInValues"
+        },
+        {
+          "severity": "REVIEW",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "potentially secret parameter config.collectd.auth_file might not be allowed",
+          "rule": "NoSensitiveInfoInValues"
+        },
+        {
+          "severity": "REVIEW",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "potentially secret parameter config.http.https_certificate might not be allowed",
+          "rule": "NoSensitiveInfoInValues"
+        },
+        {
+          "severity": "REVIEW",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "potentially secret parameter config.http.https_private_key might not be allowed",
+          "rule": "NoSensitiveInfoInValues"
+        },
+        {
+          "severity": "REVIEW",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "potentially secret parameter config.http.shared_secret might not be allowed",
+          "rule": "NoSensitiveInfoInValues"
+        },
+        {
+          "severity": "REVIEW",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "potentially secret parameter config.opentsdb.certificate might not be allowed",
+          "rule": "NoSensitiveInfoInValues"
+        },
+        {
+          "severity": "REVIEW",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "potentially secret parameter config.subscriber.ca_certs might not be allowed",
+          "rule": "NoSensitiveInfoInValues"
+        },
+        {
+          "severity": "REVIEW",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "potentially secret parameter createSecretsJob might not be allowed",
+          "rule": "NoSensitiveInfoInValues"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "LICENSE"
+          ],
+          "text": "no Apache 2.0 license found in root license file",
+          "rule": "LicenseIsApache2"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "README.md"
+          ],
+          "text": "no preinstall steps found for PodDisruptionBudgets in Prerequisites of README",
+          "rule": "PodDisruptionBudgetInReadme"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v2.5.0.0\" in tag for image \"cp.icr.io/cp/cpd/influxdb_alpine:v2.5.0.0\" at images[0].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v2.5.0.0\" in tag for image \"cp.icr.io/cp/cpd/privatecloud-redis-repo:v2.5.0.0\" at images[1].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v2.5.0.0\" in tag for image \"cp.icr.io/cp/cpd/privatecloud-usermgmt:v2.5.0.0\" at images[2].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v2.5.0.0\" in tag for image \"cp.icr.io/cp/cpd/zen-meta-couchdb:v2.5.0.0\" at images[4].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "ibm_cloud_pak/manifest.yaml"
+          ],
+          "text": "expected version \"v2.5.0.0\" in tag for image \"cp.icr.io/cp/cpd/zen-metastore-db:v2.5.0.0\" at images[3].references[0].pull-repository to match \"^(\\\\d+\\\\.)*\\\\d+$\"",
+          "rule": "ContainerImageNameIsValid"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "metadata on \"global.userHomePVC\" not allowed because it is not shown in the UI because it has both a parent and children",
+          "rule": "MidLevelValueHasNoMetadata"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "metadata on \"global.userHomePVC.persistence\" not allowed because it is not shown in the UI because it has both a parent and children",
+          "rule": "MidLevelValueHasNoMetadata"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.admin.bind_address\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.admin.https_certificate\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.admin.https_enabled\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.bind_address\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.collectd.auth_file\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.collectd.batch_pending\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.collectd.batch_size\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.collectd.batch_timeout\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.collectd.bind_address\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.collectd.read_buffer\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.collectd.retention_policy\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.collectd.security_level\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.continuous_queries\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.continuous_queries.log_enabled\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.continuous_queries.run_interval\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.coordinator.log_queries_after\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.coordinator.max_concurrent_queries\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.coordinator.max_select_buckets\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.coordinator.max_select_point\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.coordinator.max_select_series\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.coordinator.query_timeout\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.coordinator.write_timeout\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.data.cache_max_memory_size\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.data.cache_snapshot_memory_size\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.data.cache_snapshot_write_cold_duration\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.data.compact_full_write_cold_duration\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.data.max_series_per_database\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.data.max_values_per_tag\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.data.query_log_enabled\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.data.trace_logging_enabled\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.graphite.batch_pending\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.graphite.batch_size\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.graphite.batch_timeout\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.graphite.bind_address\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.graphite.consistency_level\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.graphite.retention_policy\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.graphite.udp_read_buffer\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.http.auth_enabled\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.http.bind_address\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.http.bind_socket\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.http.https_certificate\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.http.https_enabled\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.http.https_private_key\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.http.log_enabled\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.http.max_connection_limit\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.http.max_row_limit\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.http.pprof_enabled\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.http.shared_secret\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.http.unix_socket_enabled\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.http.write_tracing\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.meta.logging_enabled\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.meta.retention_autocreate\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.monitor.store_database\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.monitor.store_enabled\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.monitor.store_interval\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.opentsdb.batch_pending\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.opentsdb.batch_size\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.opentsdb.batch_timeout\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.opentsdb.bind_address\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.opentsdb.consistency_level\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.opentsdb.log_point_errors\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.opentsdb.retention_policy\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.opentsdb.tls_enabled\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.reporting_disabled\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.retention.check_interval\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.shard_precreation\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.shard_precreation.advance_period\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.shard_precreation.check_interval\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.storage_directory\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.subscriber.ca_certs\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.subscriber.http_timeout\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.subscriber.insecure_skip_verify\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.subscriber.write_buffer_size\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.subscriber.write_concurrency\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.udp.batch_pending\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.udp.batch_size\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.udp.batch_timeout\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.udp.bind_address\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.udp.read_buffer\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"config.udp.retention_policy\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"global.docker_registry_prefix\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"global.nav.deployment_target\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"global.nav.nav_context\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"nginxRepo.need_global_cookies\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"nginxRepo.need_local_cookies\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"usermgmt.allow_global_admin_delete\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"usermgmt.dark_login_theme\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"usermgmt.delegate_url\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"usermgmt.show_access_levels\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"usermgmt.show_user_approval\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"usermgmt.usermgmt_allow_ldap_config_changes\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"usermgmt.usermgmt_delegated\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"usermgmt.usermgmt_enable_localrepo\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.CacheSize\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.ClusterDomain\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.Component\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.ExternalGrpcName\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.ExternalGrpcPort\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.ExternalHttpPort\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.HttpName\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.InternalGrpcName\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.InternalGrpcPort\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.InternalHttpPort\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.JoinExisting\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.Locality\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.MaxSQLMemory\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.MaxUnavailable\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.Name\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.NodeSelector\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.PodManagementPolicy\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.Replicas\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.Resources\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.Service\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.Storage\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.Tolerations\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "WARNING",
+          "paths": [
+            "values.yaml"
+          ],
+          "text": "expected parameter \"zenCoreMetaDb.UpdateStrategy\" to be camelCase",
+          "rule": "ParameterIsCamelCase"
+        },
+        {
+          "severity": "ERROR",
+          "text": "expected name to begin with \"ibm-\"",
+          "rule": "IBMInName"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "Chart.yaml"
+          ],
+          "text": "expected chart with the Commercial keyword and no Limited keyword to have a name ending in \"-prod\"",
+          "rule": "ChartNameVersionClassificationMatch"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "Chart.yaml"
+          ],
+          "text": "expected chart without name ending in \"-dev\" or \"-prod\" to have both the Commercial and Limited keywords",
+          "rule": "ChartNameVersionClassificationMatch"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "README.md"
+          ],
+          "text": "required custom pod security definition not found using regex \"(?i)Custom SecurityContextConstraints definition:\\\\s+```\"",
+          "rule": "CustomPodSecurityInReadme"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "cv-tests"
+          ],
+          "text": "no application tests defined",
+          "rule": "AppTestExists"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "cv-tests"
+          ],
+          "text": "no install tests defined",
+          "rule": "InstallTestExists"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "ibm_cloud_pak/qualification.yaml"
+          ],
+          "text": "SCC name \"cpd-zensys-scc\" is not valid at prereqs.security.openshift.securityContextConstraints.name, valid values are [\"anyuid\" \"hostaccess\" \"hostmount-anyuid\" \"hostnetwork\" \"ibm-anyuid-hostaccess-scc\" \"ibm-anyuid-hostpath-scc\" \"ibm-anyuid-scc\" \"ibm-privileged-scc\" \"ibm-restricted-scc\" \"nonroot\" \"privileged\" \"restricted\"]",
+          "rule": "PodSecurityInQualificationYAML"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "ibm_cloud_pak/qualification.yaml"
+          ],
+          "text": "installer role \"\" not valid at prereqs.security.ibmCloudPrivate.installerRole.name, valid values are [\"Administrator\" \"ClusterAdministrator\" \"Operator\"]",
+          "rule": "QualificationHasValidRole"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.admin.bind_address defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.admin.enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.admin.https_certificate defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.admin.https_enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.bind_address defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.collectd.auth_file defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.collectd.batch_pending defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.collectd.batch_size defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.collectd.batch_timeout defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.collectd.bind_address defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.collectd.database defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.collectd.enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.collectd.read_buffer defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.collectd.retention_policy defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.collectd.security_level defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.collectd.typesdb defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.continuous_queries.enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.continuous_queries.log_enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.continuous_queries.run_interval defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.coordinator.log_queries_after defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.coordinator.max_concurrent_queries defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.coordinator.max_select_buckets defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.coordinator.max_select_point defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.coordinator.max_select_series defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.coordinator.query_timeout defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.coordinator.write_timeout defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.data.cache_max_memory_size defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.data.cache_snapshot_memory_size defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.data.cache_snapshot_write_cold_duration defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.data.compact_full_write_cold_duration defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.data.max_series_per_database defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.data.max_values_per_tag defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.data.query_log_enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.data.trace_logging_enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.graphite.batch_pending defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.graphite.batch_size defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.graphite.batch_timeout defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.graphite.bind_address defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.graphite.consistency_level defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.graphite.database defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.graphite.enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.graphite.protocol defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.graphite.retention_policy defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.graphite.separator defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.graphite.udp_read_buffer defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.auth_enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.bind_address defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.bind_socket defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.https_certificate defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.https_enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.https_private_key defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.log_enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.max_connection_limit defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.max_row_limit defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.pprof_enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.realm defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.shared_secret defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.unix_socket_enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.http.write_tracing defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.meta.logging_enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.meta.retention_autocreate defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.monitor.store_database defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.monitor.store_enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.monitor.store_interval defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.opentsdb.batch_pending defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.opentsdb.batch_size defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.opentsdb.batch_timeout defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.opentsdb.bind_address defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.opentsdb.certificate defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.opentsdb.consistency_level defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.opentsdb.database defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.opentsdb.enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.opentsdb.log_point_errors defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.opentsdb.retention_policy defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.opentsdb.tls_enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.reporting_disabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.retention.check_interval defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.retention.enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.shard_precreation.advance_period defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.shard_precreation.check_interval defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.shard_precreation.enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.storage_directory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.subscriber.ca_certs defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.subscriber.enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.subscriber.http_timeout defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.subscriber.insecure_skip_verify defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.subscriber.write_buffer_size defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.subscriber.write_concurrency defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.udp.batch_pending defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.udp.batch_size defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.udp.batch_timeout defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.udp.bind_address defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.udp.database defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.udp.enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.udp.precision defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.udp.read_buffer defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "config.udp.retention_policy defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "couchdb.image.repository defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "couchdb.replicas defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "couchdb.resources.limits.cpu defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "couchdb.resources.limits.memory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "couchdb.resources.requests.cpu defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "couchdb.resources.requests.memory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "couchdbSrvPVC.name defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "couchdbSrvPVC.persistence.existingClaimName defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "couchdbSrvPVC.persistence.size defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "couchdbSrvPVC.storageClass defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "createSecretsJob.image.repository defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "createSecretsJob.resources.limits.cpu defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "createSecretsJob.resources.limits.memory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "createSecretsJob.resources.requests.cpu defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "createSecretsJob.resources.requests.memory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "env defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.admin.sa defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.architecture defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.baseInstaller defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.editor.sa defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.globalProductName defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.ibmProduct defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.image.tag defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.influxdbPVC.persistence.defaultClaimName defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.influxdbPVC.persistence.existingClaimName defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.influxdbPVC.persistence.size defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.minimumUID defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.nav.deployment_target defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.nav.nav_context defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.persistence.enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.persistence.storageClassName defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.persistence.useDynamicProvisioning defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.productName defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.userHomePVC.persistence.size defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "global.viewer.sa defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "image.pullPolicy defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "influxdb.image.pullPolicy defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "influxdb.image.repository defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "influxdb.replicas defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "nginxRepo.need_global_cookies defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "nginxRepo.need_local_cookies defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "persistence.accessMode defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "persistence.enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "redisPVC.name defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "redisPVC.persistence.existingClaimName defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "redisPVC.persistence.size defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "redisRepo.image.repository defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "redisRepo.replicas defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "redisRepo.resources.limits.cpu defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "redisRepo.resources.limits.memory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "redisRepo.resources.requests.cpu defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "redisRepo.resources.requests.memory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "redisRepo.sa defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "resources.limits.cpu defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "resources.limits.memory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "resources.requests.cpu defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "resources.requests.memory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "retentionDays defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "service.type defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "setDefaultUser.activeDeadlineSeconds defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "setDefaultUser.enabled defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "setDefaultUser.restartPolicy defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "setDefaultUser.user.privileges defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "userHomePrep.image.repository defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.allow_global_admin_delete defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.dark_login_theme defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.delegate_url defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.image.repository defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.replicas defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.resources.limits.cpu defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.resources.limits.memory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.resources.requests.cpu defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.resources.requests.memory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.showK8sMgmt defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.show_access_levels defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.show_user_approval defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.usermgmt_allow_ldap_config_changes defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.usermgmt_delegated defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "usermgmt.usermgmt_enable_localrepo defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.CacheSize defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.ClusterDomain defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.Component defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.ExternalGrpcName defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.ExternalGrpcPort defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.ExternalHttpPort defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.HttpName defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.InternalGrpcName defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.InternalGrpcPort defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.InternalHttpPort defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.JoinExisting defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.Locality defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.MaxSQLMemory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.MaxUnavailable defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.Name defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.PodManagementPolicy defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.Replicas defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.Resources.limits.cpu defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.Resources.limits.memory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.Resources.requests.cpu defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.Resources.requests.memory defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.Service.type defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.Storage defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.UpdateStrategy.type defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.image.repository defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.sa defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        },
+        {
+          "severity": "ERROR",
+          "paths": [
+            "values-metadata.yaml"
+          ],
+          "text": "zenCoreMetaDb.storageClass defined in values.yaml but not in values-metadata.yaml",
+          "rule": "ValuesMetadataStructureMatchesValues"
+        }
+      ],
+      "subcomponents": {
+        "helm-cvtest/0010-infra/default": {
+          "pass": false,
+          "name": "0010-infra/default",
+          "type": "helm-cvtest",
+          "messages": [
+            {
+              "severity": "REVIEW",
+              "paths": [
+                "charts/zenhelper/charts/sch/templates/_affinity.tpl:124",
+                "charts/zenhelper/charts/sch/templates/_affinity.tpl:125",
+                "charts/zenhelper/charts/sch/templates/_affinity.tpl:130",
+                "charts/zenhelper/charts/sch/templates/_affinity.tpl:153",
+                "charts/zenhelper/charts/sch/templates/_affinity.tpl:173",
+                "charts/zenhelper/charts/sch/templates/_affinity.tpl:174",
+                "charts/zenhelper/charts/sch/templates/_affinity.tpl:189",
+                "charts/zenhelper/charts/sch/templates/_affinity.tpl:191"
+              ],
+              "text": "parameter is used but not defined: .Values.arch",
+              "rule": "UsedParametersAreDefined"
+            },
+            {
+              "severity": "REVIEW",
+              "paths": [
+                "templates/create-secrets-job.yaml",
+                "templates/zen-metastoredb-certs.yaml"
+              ],
+              "text": "found helm hook",
+              "rule": "ReviewHelmHooks"
+            },
+            {
+              "severity": "REVIEW",
+              "paths": [
+                "templates/influx-deployment.yaml:53",
+                "templates/influx-deployment.yaml:55"
+              ],
+              "text": "parameter is used but not defined: .Values.env",
+              "rule": "UsedParametersAreDefined"
+            },
+            {
+              "severity": "REVIEW",
+              "paths": [
+                "templates/redis-deployment.yaml"
+              ],
+              "text": "service account \"default\" at spec.template.spec.serviceAccountName not allowed",
+              "rule": "NoDefaultServiceAccountName"
+            },
+            {
+              "severity": "REVIEW",
+              "paths": [
+                "templates/zen-metastoredb-init.yaml"
+              ],
+              "text": "service account \"default\" at spec.template.spec.serviceAccountName not allowed",
+              "rule": "NoDefaultServiceAccountName"
+            },
+            {
+              "severity": "ERROR",
+              "text": "no helm test defined",
+              "rule": "HelmTestExists"
+            },
+            {
+              "severity": "ERROR",
+              "text": "parameter is defined but not used: .Values.global.persistence.enabled",
+              "rule": "DefinedParametersAreUsed"
+            },
+            {
+              "severity": "ERROR",
+              "text": "parameter is defined but not used: .Values.zenCoreMetaDb.ClusterDomain",
+              "rule": "DefinedParametersAreUsed"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/couchdb-deployment.yaml"
+              ],
+              "text": "\"ALL\" not found in spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "ContainerHasDropAll"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/couchdb-deployment.yaml"
+              ],
+              "text": "Deployment pointing to PVC in templates/couchdb-pvc.yaml with ReadWriteOnce access mode not allowed",
+              "rule": "NoDeploymentsWithReadWriteOncePVC"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/couchdb-deployment.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/couchdb-deployment.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under spec.template.metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/couchdb-deployment.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.hostNetwork, spec.template.spec.hostPID, spec.template.spec.hostIPC, spec.template.spec.securityContext.runAsNonRoot OR spec.template.spec.containers[0].securityContext.runAsNonRoot, spec.template.spec.containers[0].securityContext.privileged, spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem, spec.template.spec.containers[0].securityContext.allowPrivilegeEscalation, at least one element in spec.template.spec.containers[0].securityContext.capabilities.add OR spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/couchdb-pvc.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/couchdb-svc.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/create-secrets-job.yaml"
+              ],
+              "text": "\"ALL\" not found in spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "ContainerHasDropAll"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/create-secrets-job.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/create-secrets-job.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under spec.template.metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/create-secrets-job.yaml"
+              ],
+              "text": "image \"icpd-requisite:v2.5.0.0\" used at spec.template.spec.containers[0].image not found in manifest for VA scanning",
+              "rule": "UsedImagesInManifest"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/create-secrets-job.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.hostNetwork, spec.template.spec.hostPID, spec.template.spec.hostIPC, spec.template.spec.securityContext.runAsNonRoot OR spec.template.spec.containers[0].securityContext.runAsNonRoot, spec.template.spec.securityContext.runAsUser OR spec.template.spec.containers[0].securityContext.runAsUser, spec.template.spec.containers[0].securityContext.privileged, spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem, spec.template.spec.containers[0].securityContext.allowPrivilegeEscalation, at least one element in spec.template.spec.containers[0].securityContext.capabilities.add OR spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/influx-config.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/influx-deployment.yaml"
+              ],
+              "text": "\"ALL\" not found in spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "ContainerHasDropAll"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/influx-deployment.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/influx-deployment.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under spec.template.metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/influx-deployment.yaml"
+              ],
+              "text": "image \"influxdb:v2.5.0.0\" used at spec.template.spec.containers[0].image not found in manifest for VA scanning",
+              "rule": "UsedImagesInManifest"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/influx-deployment.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.hostNetwork, spec.template.spec.hostPID, spec.template.spec.hostIPC, spec.template.spec.securityContext.runAsNonRoot OR spec.template.spec.containers[0].securityContext.runAsNonRoot, spec.template.spec.containers[0].securityContext.privileged, spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem, spec.template.spec.containers[0].securityContext.allowPrivilegeEscalation, at least one element in spec.template.spec.containers[0].securityContext.capabilities.add OR spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/influx-pvc.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/influx-service.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/product-configmap.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/pv-prep-job.yaml"
+              ],
+              "text": "\"ALL\" not found in spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "ContainerHasDropAll"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/pv-prep-job.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/pv-prep-job.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under spec.template.metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/pv-prep-job.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.hostNetwork, spec.template.spec.hostPID, spec.template.spec.hostIPC, spec.template.spec.securityContext.runAsNonRoot OR spec.template.spec.containers[0].securityContext.runAsNonRoot, spec.template.spec.securityContext.runAsUser OR spec.template.spec.containers[0].securityContext.runAsUser, spec.template.spec.containers[0].securityContext.privileged, spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem, spec.template.spec.containers[0].securityContext.allowPrivilegeEscalation, at least one element in spec.template.spec.containers[0].securityContext.capabilities.add OR spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/pv-setup-configmap.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/redis-deployment.yaml"
+              ],
+              "text": "\"ALL\" not found in spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "ContainerHasDropAll"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/redis-deployment.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/redis-deployment.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under spec.template.metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/redis-deployment.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.hostNetwork, spec.template.spec.hostPID, spec.template.spec.hostIPC, spec.template.spec.securityContext.runAsNonRoot OR spec.template.spec.containers[0].securityContext.runAsNonRoot, spec.template.spec.securityContext.runAsUser OR spec.template.spec.containers[0].securityContext.runAsUser, spec.template.spec.containers[0].securityContext.privileged, spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem, spec.template.spec.containers[0].securityContext.allowPrivilegeEscalation, at least one element in spec.template.spec.containers[0].securityContext.capabilities.add OR spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/redis-pvc.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/redis-svc.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/user-home-pvc.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/usermgmt-deployment.yaml"
+              ],
+              "text": "\"ALL\" not found in spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "ContainerHasDropAll"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/usermgmt-deployment.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/usermgmt-deployment.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under spec.template.metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/usermgmt-deployment.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.hostNetwork, spec.template.spec.hostPID, spec.template.spec.hostIPC, spec.template.spec.securityContext.runAsNonRoot OR spec.template.spec.containers[0].securityContext.runAsNonRoot, spec.template.spec.containers[0].securityContext.privileged, spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem, spec.template.spec.containers[0].securityContext.allowPrivilegeEscalation, at least one element in spec.template.spec.containers[0].securityContext.capabilities.add OR spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/usermgmt-prep-job.yaml"
+              ],
+              "text": "\"ALL\" not found in spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "ContainerHasDropAll"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/usermgmt-prep-job.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/usermgmt-prep-job.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under spec.template.metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/usermgmt-prep-job.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.hostNetwork, spec.template.spec.hostPID, spec.template.spec.hostIPC, spec.template.spec.securityContext.runAsNonRoot OR spec.template.spec.containers[0].securityContext.runAsNonRoot, spec.template.spec.securityContext.runAsUser OR spec.template.spec.containers[0].securityContext.runAsUser, spec.template.spec.containers[0].securityContext.privileged, spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem, spec.template.spec.containers[0].securityContext.allowPrivilegeEscalation, at least one element in spec.template.spec.containers[0].securityContext.capabilities.add OR spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/usermgmt-prep.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/usermgmt-svc.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-certs.yaml"
+              ],
+              "text": "\"ALL\" not found in spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "ContainerHasDropAll"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-certs.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-certs.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under spec.template.metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-certs.yaml"
+              ],
+              "text": "image \"zen-metastoredb:v2.5.0.0\" used at spec.template.spec.containers[0].image not found in manifest for VA scanning",
+              "rule": "UsedImagesInManifest"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-certs.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.hostNetwork, spec.template.spec.hostPID, spec.template.spec.hostIPC, spec.template.spec.securityContext.runAsNonRoot OR spec.template.spec.containers[0].securityContext.runAsNonRoot, spec.template.spec.securityContext.runAsUser OR spec.template.spec.containers[0].securityContext.runAsUser, spec.template.spec.containers[0].securityContext.privileged, spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem, spec.template.spec.containers[0].securityContext.allowPrivilegeEscalation, at least one element in spec.template.spec.containers[0].securityContext.capabilities.add OR spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-cluster-svc.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-cluster-svc.yaml"
+              ],
+              "text": "alpha annotation at metadata.annotations.\"service.alpha.kubernetes.io/tolerate-unready-endpoints\" not allowed",
+              "rule": "NoAlphaAnnotations"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-init.yaml"
+              ],
+              "text": "\"ALL\" not found in spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "ContainerHasDropAll"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-init.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-init.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under spec.template.metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-init.yaml"
+              ],
+              "text": "image \"zen-metastoredb:v2.5.0.0\" used at spec.template.spec.containers[0].image not found in manifest for VA scanning",
+              "rule": "UsedImagesInManifest"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-init.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.hostNetwork, spec.template.spec.hostPID, spec.template.spec.hostIPC, spec.template.spec.securityContext.runAsNonRoot OR spec.template.spec.containers[0].securityContext.runAsNonRoot, spec.template.spec.securityContext.runAsUser OR spec.template.spec.containers[0].securityContext.runAsUser, spec.template.spec.containers[0].securityContext.privileged, spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem, spec.template.spec.containers[0].securityContext.allowPrivilegeEscalation, at least one element in spec.template.spec.containers[0].securityContext.capabilities.add OR spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "PodSecurityContextDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-poddisruptionbudget.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-public-svc.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-statefulset.yaml"
+              ],
+              "text": "\"ALL\" not found in spec.template.spec.containers[0].securityContext.capabilities.drop",
+              "rule": "ContainerHasDropAll"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-statefulset.yaml"
+              ],
+              "text": "\"ALL\" not found in spec.template.spec.initContainers[0].securityContext.capabilities.drop",
+              "rule": "ContainerHasDropAll"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-statefulset.yaml"
+              ],
+              "text": "\"ALL\" not found in spec.template.spec.initContainers[1].securityContext.capabilities.drop",
+              "rule": "ContainerHasDropAll"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-statefulset.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-statefulset.yaml"
+              ],
+              "text": "[\"app.kubernetes.io/instance\" \"app.kubernetes.io/managed-by\" \"app.kubernetes.io/name\" \"helm.sh/chart\"] not defined under spec.template.metadata.labels",
+              "rule": "RequiredMetadataLabelsDefined"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-statefulset.yaml"
+              ],
+              "text": "image \"zen-metastoredb:v2.5.0.0\" used at spec.template.spec.containers[0].image not found in manifest for VA scanning",
+              "rule": "UsedImagesInManifest"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-statefulset.yaml"
+              ],
+              "text": "image \"zen-metastoredb:v2.5.0.0\" used at spec.template.spec.initContainers[0].image not found in manifest for VA scanning",
+              "rule": "UsedImagesInManifest"
+            },
+            {
+              "severity": "ERROR",
+              "paths": [
+                "templates/zen-metastoredb-statefulset.yaml"
+              ],
+              "text": "keys for pod security context not defined: spec.template.spec.hostNetwork, spec.template.spec.hostPID, spec.template.spec.hostIPC, spec.template.spec.securityContext.runAsNonRoot OR spec.template.spec.containers[0].securityContext.runAsNonRoot, spec.template.spec.containers[0].securityContext.privileged, spec.template.spec.containers[0].securityContext.readOnlyRootFilesystem, spec.template.spec.containers[0].securityContext.allowPrivilegeEscalation, at least one element in spec.template.spec.containers[0].securityContext.capabilities.add OR spec.template.spec.containers[0].securityContext.capabilities.drop, spec.template.spec.securityContext.runAsNonRoot OR spec.template.spec.initContainers[0].securityContext.runAsNonRoot, spec.template.spec.initContainers[0].securityContext.privileged, spec.template.spec.initContainers[0].securityContext.readOnlyRootFilesystem, spec.template.spec.initContainers[0].securityContext.allowPrivilegeEscalation, at least one element in spec.template.spec.initContainers[0].securityContext.capabilities.add OR spec.template.spec.initContainers[0].securityContext.capabilities.drop, spec.template.spec.securityContext.runAsNonRoot OR spec.template.spec.initContainers[1].securityContext.runAsNonRoot, spec.template.spec.initContainers[1].securityContext.privileged, spec.template.spec.initContainers[1].securityContext.readOnlyRootFilesystem, spec.template.spec.initContainers[1].securityContext.allowPrivilegeEscalation, at least one element in spec.template.spec.initContainers[1].securityContext.capabilities.add OR spec.template.spec.initContainers[1].securityContext.capabilities.drop",
+              "rule": "PodSecurityContextDefined"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
